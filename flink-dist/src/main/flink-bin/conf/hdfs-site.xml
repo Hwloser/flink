@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- hdfs slave节点下线文件路径 -->
+    <property>
+        <name>dfs.hosts.exclude</name>
+        <value>/opt/apache/hadoop-2.6.0/etc/hadoop/exclude-slaves</value>
+    </property>
+    <!-- nameservice 中 每个namenode的唯一标识 HA 目前每个nameService 最多能配置两个 -->
+    <property>
+        <name>dfs.ha.namenodes.fat-batch</name>
+        <value>hzpl009044102-batch-fat.hzpl.ztosys.com,hzpl009044103-batch-fat.hzpl.ztosys.com</value>
+    </property>
+    <!--  -->
+        <property>
+        <name>dfs.namenode.https-address.fat-batch.hzpl009044102-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044102-batch-fat.hzpl.ztosys.com:50470</value>
+    </property>
+    <!-- NameNode 监听的 RPC 地址 处理所有 client 的rpc请求 -->
+    <property>
+        <name>dfs.namenode.rpc-address.fat-batch.hzpl009044102-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044102-batch-fat.hzpl.ztosys.com:8020</value>
+    </property>
+    <!-- 负责hdfs Service 之间的通信 比如: DATANODE， 如果不设置的话 默认取「dfs.namenode.rpc-address」  -->
+    <property>
+        <name>dfs.namenode.servicerpc-address.fat-batch.hzpl009044102-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044102-batch-fat.hzpl.ztosys.com:8022</value>
+    </property>
+    <!-- 存储 namenode 元数据信息的目录 比如 fsimage，多个目录用逗号分割 -->
+    <property>
+        <name>dfs.namenode.name.dir.fat-batch.hzpl009044102-batch-fat.hzpl.ztosys.com</name>
+        <value>/data/dfs/nn</value>
+    </property>
+    <!-- namenode 存放 editslog的 本地文件路径 -->
+    <property>
+        <name>dfs.namenode.edits.dir.fat-batch.hzpl009044102-batch-fat.hzpl.ztosys.com</name>
+        <value>/data/dfs/nn</value>
+    </property>
+    <!-- namenode 共享 edit存储目录 用与standby 同步edit-->
+    <property>
+        <name>dfs.namenode.shared.edits.dir.fat-batch.hzpl009044102-batch-fat.hzpl.ztosys.com</name>
+        <value>qjournal://hzpl009044104-batch-fat.hzpl.ztosys.com:8485;hzpl009044105-batch-fat.hzpl.ztosys.com:8485;hzpl009044106-batch-fat.hzpl.ztosys.com:8485;hzpl009044107-batch-fat.hzpl.ztosys.com:8485;hzpl009044108-batch-fat.hzpl.ztosys.com:8485/fat-batch
+        </value>
+    </property>
+    <!--  namenode web ui页面监听的服务 -->
+    <property>
+        <name>dfs.namenode.http-address.fat-batch.hzpl009044102-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044102-batch-fat.hzpl.ztosys.com:50070</value>
+    </property>
+        <property>
+        <name>dfs.namenode.https-address.fat-batch.hzpl009044103-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044103-batch-fat.hzpl.ztosys.com:50470</value>
+    </property>
+    <!-- NameNode 监听的 RPC 地址 处理所有 client 的rpc请求 -->
+    <property>
+        <name>dfs.namenode.rpc-address.fat-batch.hzpl009044103-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044103-batch-fat.hzpl.ztosys.com:8020</value>
+    </property>
+    <!-- 负责hdfs Service 之间的通信 比如: DATANODE， 如果不设置的话 默认取「dfs.namenode.rpc-address」  -->
+    <property>
+        <name>dfs.namenode.servicerpc-address.fat-batch.hzpl009044103-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044103-batch-fat.hzpl.ztosys.com:8022</value>
+    </property>
+    <!-- 存储 namenode 元数据信息的目录 比如 fsimage，多个目录用逗号分割 -->
+    <property>
+        <name>dfs.namenode.name.dir.fat-batch.hzpl009044103-batch-fat.hzpl.ztosys.com</name>
+        <value>/data/dfs/nn</value>
+    </property>
+    <!-- namenode 存放 editslog的 本地文件路径 -->
+    <property>
+        <name>dfs.namenode.edits.dir.fat-batch.hzpl009044103-batch-fat.hzpl.ztosys.com</name>
+        <value>/data/dfs/nn</value>
+    </property>
+    <!-- namenode 共享 edit存储目录 用与standby 同步edit-->
+    <property>
+        <name>dfs.namenode.shared.edits.dir.fat-batch.hzpl009044103-batch-fat.hzpl.ztosys.com</name>
+        <value>qjournal://hzpl009044104-batch-fat.hzpl.ztosys.com:8485;hzpl009044105-batch-fat.hzpl.ztosys.com:8485;hzpl009044106-batch-fat.hzpl.ztosys.com:8485;hzpl009044107-batch-fat.hzpl.ztosys.com:8485;hzpl009044108-batch-fat.hzpl.ztosys.com:8485/fat-batch
+        </value>
+    </property>
+    <!--  namenode web ui页面监听的服务 -->
+    <property>
+        <name>dfs.namenode.http-address.fat-batch.hzpl009044103-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044103-batch-fat.hzpl.ztosys.com:50070</value>
+    </property>
+    
+    <!--  namenode 防御策略方法 -->
+    <property>
+        <name>dfs.ha.fencing.methods</name>
+        <value>sshfence</value>
+    </property>
+
+    <!--  namenode fencing ssh密钥路径 -->
+    <property>
+        <name>dfs.ha.fencing.ssh.private-key-files</name>
+        <value>/var/lib/hadoop-hdfs/.ssh/id_rsa</value>
+    </property>
+
+    <!--  namenode fencing超时时间 -->
+    <property>
+        <name>dfs.ha.fencing.ssh.connect-timeout</name>
+        <value>30000</value>
+    </property>
+
+    <!-- 定义 nameservice ID -->
+    <property>
+        <name>dfs.nameservices</name>
+        <value>fat-batch</value>
+    </property>
+    <!-- 开启该 nameservice 的ha 配置 -->
+    <property>
+        <name>dfs.ha.automatic-failover.enabled.fat-batch</name>
+        <value>true</value>
+    </property>
+    <!-- DFS Client 用于确定 哪个Namenode 当前为active 目前唯一实现类为 ConfiguredFailoverProxyProvider 默认配置 -->
+    <property>
+        <name>dfs.client.failover.proxy.provider.fat-batch</name>
+        <value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
+    </property>
+    <!-- 该配置官方推荐在 core-site.xml中 zk地址 用于 ZKFailoverController 的故障自动转移   -->
+    <property>
+        <name>ha.zookeeper.quorum</name>
+        <value>hzpl009044104-batch-fat.hzpl.ztosys.com:2181,hzpl009044105-batch-fat.hzpl.ztosys.com:2181,hzpl009044106-batch-fat.hzpl.ztosys.com:2181,hzpl009044107-batch-fat.hzpl.ztosys.com:2181,hzpl009044108-batch-fat.hzpl.ztosys.com:2181</value>
+    </property>
+    <!-- nameNode 用于处理 datanode 等其他非 clientNode 的RPC请求的线程数，只有当 dfs.namenode.servicerpc-address 配置后生效 -->
+    <property>
+        <name>dfs.namenode.service.handler.count</name>
+        <value>220</value>
+    </property>
+    <!-- Namenode RPC server threads 监听 client rpc请求 如果 dfs.namenode.servicerpc-address 没有配置 则监听所有node的请求 -->
+    <property>
+        <name>dfs.namenode.handler.count</name>
+        <value>220</value>
+    </property>
+    <!-- namenode 每次心跳 需后续研究下  -->
+    <property>
+        <name>dfs.namenode.invalidate.work.pct.per.iteration</name>
+        <value>0.32</value>
+    </property>
+    <property>
+        <name>dfs.namenode.replication.work.multiplier.per.iteration</name>
+        <value>10</value>
+    </property>
+
+    <!-- 开启 acl 权限 默认关闭 -->
+    <property>
+        <name>dfs.namenode.acls.enabled</name>
+        <value>true</value>
+    </property>
+    <!-- 开启 acl 继承模式 -->
+    <property>
+        <name>dfs.namenode.posix.acl.inheritance.enabled</name>
+        <value>true</value>
+    </property>
+
+    <!-- 创建 checkpoint 事物数间隔  默认 1000000-->
+    <property>
+        <name>dfs.namenode.checkpoint.txns</name>
+        <value>10000000</value>
+    </property>
+
+
+    <!-- 异步审计日志 -->
+    <property>
+        <name>dfs.namenode.audit.log.async</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>dfs.namenode.edits.asynclogging</name>
+        <value>true</value>
+    </property>
+
+    <!--  若DN的复制任务大于改值时，不会将其选为复制的源节点 -->
+    <property>
+        <name>dfs.namenode.replication.max-streams-hard-limit</name>
+        <value>40</value>
+    </property>
+
+    <!-- DataNode上复制线程的最大数  -->
+    <property>
+        <name>dfs.namenode.replication.max-streams</name>
+        <value>20</value>
+    </property>
+
+    <!-- 创建文件或者目录时的 umask 默认 为 022-->
+    <property>
+        <name>fs.permissions.umask-mode</name>
+        <value>007</value>
+    </property>
+    <!-- diskbalancer 最大带宽 默认为 10 -->
+    <property>
+        <name>dfs.disk.balancer.max.disk.throughputInMBperSec</name>
+        <value>128</value>
+    </property>
+    <!-- diskbalancer 开启 默认 false-->
+    <property>
+        <name>dfs.disk.balancer.enabled</name>
+        <value>true</value>
+    </property>
+    <!-- webhdfs 关闭 默认为 true -->
+    <property>
+        <name>dfs.webhdfs.enabled</name>
+        <value>false</value>
+    </property>
+    <!-- 添加 percentile latency for rpc 加入 rpc metrics 时间间隔 为 {rpc.metrics.percentiles.intervals} -->
+    <property>
+        <name>rpc.metrics.quantile.enable</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>rpc.metrics.percentiles.intervals</name>
+        <value>60</value>
+    </property>
+    <!-- 块汇报时间间隔   -->
+    <property>
+        <name>dfs.blockreport.initialDelay</name>
+        <value>20</value>
+    </property>
+    <property>
+        <name>dfs.blockreport.incremental.intervalMsec</name>
+        <value>300</value>
+    </property>
+
+    <!-- DataNode -->
+        <property>
+        <name>dfs.datanode.address</name>
+        <value>0.0.0.0:50010</value>
+    </property>
+    <property>
+        <name>dfs.datanode.ipc.address</name>
+        <value>0.0.0.0:50020</value>
+    </property>
+    <property>
+        <name>dfs.datanode.http.address</name>
+        <value>0.0.0.0:50075</value>
+    </property>
+    <property>
+        <name>dfs.datanode.https.address</name>
+        <value>0.0.0.0:50475</value>
+    </property>
+    <!-- 用于连接 datanode和 本地hdfs client 的 UNIX domain socket 路径 -->
+    <property>
+        <name>dfs.domain.socket.path</name>
+        <value>/var/lib/hdfs-sockets/dn</value>
+    </property>
+    <!--  datanode 用户 数据传输 的最大线程数 默认为 4096 -->
+    <property>
+        <name>dfs.datanode.max.transfer.threads</name>
+        <value>8192</value>
+    </property>
+    <!--  Datanode 用于 平衡数据 的最大带宽 默认为10485760 -->
+    <property>
+        <name>dfs.datanode.balance.bandwidthPerSec</name>
+        <value>134217728</value>
+    </property>
+
+    <!-- datanode 的服务线程数 默认为 10 -->
+    <property>
+        <name>dfs.datanode.handler.count</name>
+        <value>18</value>
+    </property>
+
+
+        <!-- datanode 数据盘权限 默认700-->
+    <property>
+        <name>dfs.datanode.data.dir.perm</name>
+        <value>755</value>
+    </property>
+
+    <!-- 是否开启 datanode 实验性 getFileVBlockStorageLocations api功能 不稳定 默认为false  -->
+    <property>
+        <name>dfs.datanode.hdfs-blocks-metadata.enabled</name>
+        <value>true</value>
+    </property>
+    <!-- 是否开启短路读 默认为false-->
+    <property>
+        <name>dfs.client.read.shortcircuit</name>
+        <value>true</value>
+    </property>
+    <!-- 短路读 跳过checksum 默认为false   -->
+    <property>
+        <name>dfs.client.read.shortcircuit.skip.checksum</name>
+        <value>false</value>
+    </property>
+
+    <!-- datanode 磁盘存放策略 默认 -->
+    <property>
+        <name>dfs.datanode.fsdataset.volume.choosing.policy</name>
+        <value>org.apache.hadoop.hdfs.server.datanode.fsdataset.AvailableSpaceVolumeChoosingPolicy</value>
+    </property>
+
+    <!-- JournalNode -->
+    
+    <!-- hdfs 权限校验开启 默认为 true-->
+    <property>
+        <name>dfs.permissions.enabled</name>
+        <value>true</value>
+    </property>
+    <!-- 默认为0 表示 image 在传递时不限制带宽 -->
+    <property>
+        <name>dfs.image.transfer.bandwidthPerSec</name>
+        <value>0</value>
+    </property>
+    <!-- image 在数据交换时 socket的超时时间 默认为60000 ms-->
+    <property>
+        <name>dfs.image.transfer.timeout</name>
+        <value>120000</value>
+    </property>
+
+    <!-- ZKFC的健康检查超时的时长 -->
+    <property>
+        <name>ha.health-monitor.rpc-timeout.ms</name>
+        <value>240000</value>
+    </property>
+
+    <property>
+        <name>ha.failover-controller.new-active.rpc-timeout.ms</name>
+        <value>240000</value>
+    </property>
+
+    <property>
+        <name>dfs.namenode.checkpoint.period</name>
+        <value>7200</value>
+    </property>
+    <property>
+        <name>dfs.namenode.fs-limits.max-component-length</name>
+        <value>500</value>
+    </property>
+    <!-- 开启hdfs disk balancer -->
+    <property>
+        <name>dfs.disk.balancer.enabled</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>dfs.ha.allow.stale.reads</name>
+        <value>false</value>
+    </property>
+    <property>
+        <name>dfs.namenode.standby.read.whitelist</name>
+        <value>presto_ro</value>
+    </property>
+    <property>
+        <name>dfs.data.directory.protection</name>
+        <value>/UDF,/alluxio,/alluxio130,/bip/upload,/data/datax_buffer,/data/hbase_buffer,/data/python_envs,/data/sqoop_buffer,/hbase/archive,/hbase/hbase.id,/hbase/hbase.version,/hbase/oldWALs,/hbase/MasterProcWALs,/hbase/WALs,/hbase/corrupt,/hbase/data/*,/home/master,/user/hive/warehouse/*,/ba.db,/dim,/dim.db,/dw,/dw.db,/ods,/ods.db,/ol,/ol.db,/tmp,/st,/user/flink/savepoint,/user/flink/checkpoint,/user/sparksubmit/eventlogs,/user/flink/archive</value>
+    </property>
+    <property>
+        <name>dfs.data.directory.protection.enable</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>hdfs.admin.command.enable</name>
+        <value>false</value>
+    </property>
+    <property>
+        <name>dfs.namenode.num.checkpoints.retained</name>
+        <value>24</value>
+    </property>
+</configuration>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- nodemanager下线 文件地址 -->
+    <property>
+        <name>yarn.resourcemanager.nodes.exclude-path</name>
+        <value>/opt/apache/hadoop-2.6.0/etc/hadoop/exclude-nmslaves</value>
+    </property>
+    <!-- zk address -->
+    <property>
+        <name>yarn.resourcemanager.zk-address</name>
+        <value>hzpl009044104-batch-fat.hzpl.ztosys.com:2181,hzpl009044105-batch-fat.hzpl.ztosys.com:2181,hzpl009044106-batch-fat.hzpl.ztosys.com:2181,hzpl009044107-batch-fat.hzpl.ztosys.com:2181,hzpl009044108-batch-fat.hzpl.ztosys.com:2181</value>
+    </property>
+    <!-- cluster id -->
+    <property>
+        <name>yarn.resourcemanager.cluster-id</name>
+        <value>yarnRM</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.ha.rm-ids</name>
+        <value>hzpl009044102-batch-fat.hzpl.ztosys.com,hzpl009044103-batch-fat.hzpl.ztosys.com</value>
+    </property>
+        <property>
+        <name>yarn.resourcemanager.scheduler.address.hzpl009044102-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044102-batch-fat.hzpl.ztosys.com:8030</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.admin.address.hzpl009044102-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044102-batch-fat.hzpl.ztosys.com:8033</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.address.hzpl009044102-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044102-batch-fat.hzpl.ztosys.com:8032</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.resource-tracker.address.hzpl009044102-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044102-batch-fat.hzpl.ztosys.com:8031</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.webapp.address.hzpl009044102-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044102-batch-fat.hzpl.ztosys.com:8088</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.webapp.https.address.hzpl009044102-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044102-batch-fat.hzpl.ztosys.com:8090</value>
+    </property>
+        <property>
+        <name>yarn.resourcemanager.scheduler.address.hzpl009044103-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044103-batch-fat.hzpl.ztosys.com:8030</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.admin.address.hzpl009044103-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044103-batch-fat.hzpl.ztosys.com:8033</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.address.hzpl009044103-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044103-batch-fat.hzpl.ztosys.com:8032</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.resource-tracker.address.hzpl009044103-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044103-batch-fat.hzpl.ztosys.com:8031</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.webapp.address.hzpl009044103-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044103-batch-fat.hzpl.ztosys.com:8088</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.webapp.https.address.hzpl009044103-batch-fat.hzpl.ztosys.com</name>
+        <value>hzpl009044103-batch-fat.hzpl.ztosys.com:8090</value>
+    </property>
+    
+        <property>
+        <name>yarn.application.classpath</name>
+        <value>/opt/apache/hadoop-2.7.5/etc/hadoop:/opt/apache/hadoop-2.7.5/etc/hadoop:/opt/apache/hadoop-2.7.5/etc/hadoop:/opt/apache/hadoop-2.7.5/share/hadoop/common/lib/*:/opt/apache/hadoop-2.7.5/share/hadoop/common/*:/opt/apache/hadoop-2.7.5/share/hadoop/hdfs:/opt/apache/hadoop-2.7.5/share/hadoop/hdfs/lib/*:/opt/apache/hadoop-2.7.5/share/hadoop/hdfs/*:/opt/apache/hadoop-2.7.5/share/hadoop/yarn/lib/*:/opt/apache/hadoop-2.7.5/share/hadoop/yarn/*:/opt/apache/hadoop-2.7.5/share/hadoop/mapreduce/lib/*:/opt/apache/hadoop-2.7.5/share/hadoop/mapreduce/*:/opt/apache/hadoop-2.7.5/share/hadoop/yarn/*:/opt/apache/hadoop-2.7.5/share/hadoop/yarn/lib/*</value>
+    </property>
+    <!-- 开启 RM work preserving recovery 为 实验特性 默认为false-->
+    <property>
+        <name>yarn.resourcemanager.work-preserving-recovery.enabled</name>
+        <value>true</value>
+    </property>
+    <!-- 	启用后，ResourceManager 中止时在群集上运行的任何应用程序将在 ResourceManager 下次启动时恢复。备注：如果启用 RM-HA，则始终启用该配置  -->
+    <property>
+        <name>yarn.resourcemanager.recovery.enabled</name>
+        <value>true</value>
+    </property>
+    <!-- store 持久化类 -->
+    <property>
+        <name>yarn.resourcemanager.store.class</name>
+        <value>org.apache.hadoop.yarn.server.resourcemanager.recovery.ZKRMStateStore</value>
+    </property>
+    <!-- 如果为 true 则 ResourceManager 会有代理用户(proxy-user) 权限 -->
+    <property>
+        <name>yarn.resourcemanager.proxy-user-privileges.enabled</name>
+        <value>true</value>
+    </property>
+    <!-- 启用 rm ha-->
+    <property>
+        <name>yarn.resourcemanager.ha.enabled</name>
+        <value>true</value>
+    </property>
+    <!-- 启用 rm ha 故障自动转移 -->
+    <property>
+        <name>yarn.resourcemanager.ha.automatic-failover.enabled</name>
+        <value>true</value>
+    </property>
+    <!-- 资源 调度器 -->
+    <property>
+        <name>yarn.resourcemanager.scheduler.class</name>
+        <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.FairScheduler</value>
+    </property>
+    <!-- 是否启用持续调度 -->
+    <property>
+        <name>yarn.scheduler.fair.continuous-scheduling-enabled</name>
+        <value>false</value>
+    </property>
+    <!-- 是否在啊一个心跳内允许 多个container分配 默认为false-->
+    <property>
+        <name>yarn.scheduler.fair.assignmultiple</name>
+        <value>true</value>
+    </property>
+    <!-- 当为 true 时 没有指定对列将使用 默认队列 默认为 true-->
+    <property>
+        <name>yarn.scheduler.fair.user-as-default-queue</name>
+        <value>false</value>
+    </property>
+    <!-- 是否启用 抢占模式  -->
+    <property>
+        <name>yarn.scheduler.fair.preemption</name>
+        <value>false</value>
+    </property>
+    <!-- 为false 将在default 队列中运行 未指定队列的任务 -->
+    <property>
+        <name>yarn.scheduler.fair.allow-undeclared-pools</name>
+        <value>false</value>
+    </property>
+    <!-- 容器 可请求的最大的虚拟核数 -->
+    <property>
+        <name>yarn.scheduler.maximum-allocation-vcores</name>
+        <value>2</value>
+    </property>
+    <!-- 内存请求数量 增量  -->
+    <property>
+        <name>yarn.scheduler.increment-allocation-mb</name>
+        <value>128</value>
+    </property>
+    <!-- container 请求的最大内存  默认 8192-->
+    <property>
+        <name>yarn.scheduler.maximum-allocation-mb</name>
+        <value>3072</value>
+    </property>
+    <!-- container 请求的 最小内存 默认 1024 -->
+    <property>
+        <name>yarn.scheduler.minimum-allocation-mb</name>
+        <value>128</value>
+    </property>
+    <!-- container 请求 核数 增量 -->
+    <property>
+        <name>yarn.scheduler.increment-allocation-vcores</name>
+        <value>1</value>
+    </property>
+    <!-- 是否检查 管理 ACL 中指定的用户和组执行管理操作的授权 默认为 false -->
+    <property>
+        <name>yarn.acl.enable</name>
+        <value>true</value>
+    </property>
+    <!-- 确定哪些用户和组可在任何池中提交和中止应用程序以及可以对 ResourceManager 角色发出命令的 ACL 默认为 *-->
+    <property>
+        <name>yarn.admin.acl</name>
+        <value>*</value>
+    </property>
+    <!-- 聚合日志保留时间  默认 -1 不删除 -->
+    <property>
+        <name>yarn.log-aggregation.retain-seconds</name>
+        <value>259200</value>
+    </property>
+    <!-- 开启聚合日志 默认 false-->
+    <property>
+        <name>yarn.log-aggregation-enable</name>
+        <value>false</value>
+    </property>
+    <!-- shuffle service name -->
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle,spark_shuffle</value>
+    </property>
+    <!-- MR shuffle service 实现类 -->
+    <property>
+        <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>
+        <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+    </property>
+    <!-- Spark shuffle service 实现类 -->
+    <property>
+        <name>yarn.nodemanager.aux-services.spark_shuffle.class</name>
+        <value>org.apache.spark.network.yarn.YarnShuffleService</value>
+    </property>
+    <!-- jobhistory服务地址 -->
+    <property>
+        <name>yarn.log.server.url</name>
+        <value>http://hzpl009044103-batch-fat.hzpl.ztosys.com:19888/jobhistory/logs/</value>
+    </property>
+    <!-- 是否启用恢复机制 默认为false-->
+    <property>
+        <name>yarn.nodemanager.recovery.enabled</name>
+        <value>true</value>
+    </property>
+    <!-- 启用恢复时 NodeManager 在其中存储状态的本地文件系统目录 -->
+    <property>
+        <name>yarn.nodemanager.recovery.dir</name>
+        <value>/data/hadoop-yarn/yarn-nm-recovery</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.address</name>
+        <value>0.0.0.0:8041</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.webapp.https.address</name>
+        <value>0.0.0.0:8044</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.webapp.address</name>
+        <value>0.0.0.0:8042</value>
+    </property>
+    <!-- 将磁盘标记为运行状况不良后所允许的最大磁盘空间利用率百分比 默认 90-->
+    <property>
+        <name>yarn.nodemanager.disk-health-checker.max-disk-utilization-per-disk-percentage</name>
+        <value>95.0</value>
+    </property>
+    <!-- 可分配给容器的物理内存数量 默认 8192-->
+        <property>
+        <name>yarn.nodemanager.resource.memory-mb</name>
+        <value>8192</value>
+    </property>
+    
+    <!-- resoucemanager 保留 已完成application最大数量 默认为 50000-->
+    <property>
+        <name>yarn.resourcemanager.max-completed-applications</name>
+        <value>8000</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.am.max-attempts</name>
+        <value>2</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.am.attempts.failures.validity.interval</name>
+        <value>86400</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.vmem-check-enabled</name>
+        <value>false</value>
+    </property>
+    <property>
+        <name>yarn.scheduler.fair.max.assign</name>
+        <value>3</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.log.retain-seconds</name>
+        <value>604800</value>
+    </property>
+    <property>
+        <name>yarn.container.log.proxy</name>
+        <value>https://datacloud-monitor.test.ztosys.com/monitor/yarn/analyze-gather/log?href=</value>
+    </property>
+    <property>
+        <name>yarn.container.log.start</name>
+        <value>-1048576</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.delete.debug-delay-sec</name>
+        <value>0</value>
+    </property>
+</configuration>

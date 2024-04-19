@@ -1,0 +1,10 @@
+catalogs:
+  - name: flink
+    type: hive
+    hive-conf-dir: /Users/huanwei/git_files/huanwei/bigdata-ecosystems/flink/flink-dist/target/flink-1.14-SNAPSHOT-bin/flink-1.14-SNAPSHOT/conf
+
+execution:
+  planner: blink
+  type: streaming
+  current-catalog: flink   # 此处要和上面配置的 -name 名字一致
+  current-database: default # 选择数据库。

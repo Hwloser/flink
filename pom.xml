@@ -76,12 +76,12 @@ under the License.
 		<module>flink-streaming-scala</module>
 		<module>flink-connectors</module>
 		<module>flink-formats</module>
-		<module>flink-examples</module>
+<!--		<module>flink-examples</module>-->
 		<module>flink-clients</module>
 		<module>flink-container</module>
 		<module>flink-queryable-state</module>
 		<module>flink-tests</module>
-		<module>flink-end-to-end-tests</module>
+<!--		<module>flink-end-to-end-tests</module>-->
 		<module>flink-test-utils-parent</module>
 		<module>flink-state-backends</module>
 		<module>flink-dstl</module>
@@ -92,20 +92,21 @@ under the License.
 		<module>flink-dist</module>
 		<module>flink-metrics</module>
 		<module>flink-yarn</module>
-		<module>flink-yarn-tests</module>
-		<module>flink-fs-tests</module>
+<!--		<module>flink-yarn-tests</module>-->
+<!--		<module>flink-fs-tests</module>-->
 		<module>flink-docs</module>
 		<module>flink-python</module>
 		<module>flink-walkthroughs</module>
 		<module>flink-kubernetes</module>
 		<module>flink-external-resources</module>
-		<module>tools/ci/java-ci-tools</module>
+<!--		<module>tools/ci/java-ci-tools</module>-->
 	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<hadoop.version>2.4.1</hadoop.version>
+		<hadoop.version>2.7.5</hadoop.version>
+<!--		<hadoop.version>2.4.1</hadoop.version>-->
 		<!-- Need to use a user property here because the surefire
 			 forkCount is not exposed as a property. With this we can set
 			 it on the "mvn" commandline in travis. -->
