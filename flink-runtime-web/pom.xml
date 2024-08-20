@@ -254,17 +254,6 @@ under the License.
 				<groupId>com.github.eirslett</groupId>
 				<artifactId>frontend-maven-plugin</artifactId>
 				<version>1.9.1</version>
-				<executions>
-					<execution>
-						<id>npm run build</id>
-						<goals>
-							<goal>npm</goal>
-						</goals>
-						<configuration>
-							<arguments>run build</arguments>
-						</configuration>
-					</execution>
-				</executions>
 				<configuration>
 					<workingDirectory>web-dashboard</workingDirectory>
 				</configuration>
